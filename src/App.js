@@ -2,9 +2,15 @@ import React from 'react';
 import Navigation from './components/navigation';
 import styled from 'styled-components';
 
+const MainContainer = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fed84b 0%, #fa7993 100%);
+`;
+
 const Main = styled.main`
   padding: 35px;
-  background: linear-gradient(180deg, #fed84b 0%, #fa7993 100%);
 `;
 
 const GridContainer = styled.div`
@@ -23,9 +29,9 @@ const GridItem = styled.div`
 
 export default () => {
   return (
-    <div>
+    <div style={{ height: '100%' }}>
       <Navigation />
-      <div style={{ display: 'flex;' }}>
+      <MainContainer>
         <Main>
           <GridContainer>
             <GridItem>
@@ -42,7 +48,7 @@ export default () => {
             </GridItem>
           </GridContainer>
         </Main>
-      </div>
+      </MainContainer>
     </div>
   );
 };

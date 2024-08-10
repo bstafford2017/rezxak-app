@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 const Navigation = styled.nav``;
 
+const Logo = styled.img`
+# to do - figure this out
+  padding-left: clamp(0px, 55px, 75px);
+`;
+
 const NavLinkContainer = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -25,7 +30,7 @@ export default () => {
   return (
     <Navigation>
       <a href="./">
-        <img
+        <Logo
           width={315}
           height={105}
           src="./logo-with-text.png"
