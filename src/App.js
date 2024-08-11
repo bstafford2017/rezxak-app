@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useScroll, motion } from 'framer-motion';
 
 const MainContainer = styled.div`
   height: 100%;
@@ -89,8 +90,22 @@ const LogoAndText = styled.div`
 `;
 
 export default () => {
+  const { scrollYProgress } = useScroll();
+
   return (
     <div>
+      <motion.div
+        style={{
+          scaleX: scrollYProgress,
+          position: 'fixed',
+          top: '0',
+          left: '0',
+          right: '0',
+          height: '10px',
+          background: 'linear-gradient(90deg, #fed84b 0%, #fa7993 100%)',
+          transformOrigin: '0%',
+        }}
+      />
       <Navigation />
       <MainContainer>
         <Main>
