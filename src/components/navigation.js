@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Navigation = styled.nav``;
 
 const Logo = styled.img`
-# to do - figure this out
   padding-left: clamp(0px, 55px, 75px);
 `;
 
@@ -40,6 +39,7 @@ export default () => {
       <NavLinkContainer>
         <NavLink href="#about-us">About us</NavLink>
         <NavLink href="#services">Services</NavLink>
+        <NavLink href="#contact-us">Contact us</NavLink>
       </NavLinkContainer>
     </Navigation>
   );
