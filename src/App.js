@@ -109,71 +109,113 @@ export default () => {
       <Navigation />
       <MainContainer>
         <Main>
-          <AboutContainer>
-            <h2 id="about-us">About us</h2>
-            <GridContainer>
-              <GridItem>
-                <h3>What is Rezxak?</h3>
-                <p>We do software solutions for everyone!</p>
-              </GridItem>
-              <GridItem>
-                <h3>What is Rezxak?</h3>
-                <p>We do software solutions for everyone!</p>
-              </GridItem>
-              <GridItem>
-                <h3>What is Rezxak?</h3>
-                <p>We do software solutions for everyone!</p>
-              </GridItem>
-            </GridContainer>
-            <BuildButtonContainer>
-              <BuildButton href="#contact-us">Build with us!</BuildButton>
-            </BuildButtonContainer>
-          </AboutContainer>
-          <ServicesContainer>
-            <h2 id="services">Services</h2>
-            <GridContainer>
-              <GridItem>
-                <ServicesItemHeading>Web Design</ServicesItemHeading>
-              </GridItem>
-              <GridItem>
-                <ServicesItemHeading>
-                  System Architecture Design
-                </ServicesItemHeading>
-              </GridItem>
-              <GridItem>
-                <ServicesItemHeading>Mobile Design</ServicesItemHeading>
-              </GridItem>
-            </GridContainer>
-          </ServicesContainer>
-          <ContactContainer>
-            <h2 id="contact-us">Contact us</h2>
-            <GridContainer>
-              <GridItem>
-                <LinkWrapper
-                  href="https://www.linkedin.com/in/benjamin-t-stafford"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon size="2xl" icon={faLinkedin} />
-                  <LinkedText>LinkedIn</LinkedText>
-                </LinkWrapper>
-              </GridItem>
-              <GridItem>
-                <LinkWrapper
-                  href="https://github.com/bstafford2017"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon size="2xl" icon={faGithub} />
-                  <LinkedText>GitHub</LinkedText>
-                </LinkWrapper>
-              </GridItem>
-              <GridItem>
-                <LinkWrapper href="mailto:ben@staffordsolutionsllc.com?subject=Let%27s%20get%20in%20touch%21">
-                  <FontAwesomeIcon size="2xl" icon={faEnvelope} />
-                  <LinkedText>Email</LinkedText>
-                </LinkWrapper>
-              </GridItem>
-            </GridContainer>
-          </ContactContainer>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: -15,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <AboutContainer>
+              <h2 id="about-us">About us</h2>
+              <GridContainer>
+                <GridItem>
+                  <h3>What is Rezxak?</h3>
+                  <p>We do software solutions for everyone!</p>
+                </GridItem>
+                <GridItem>
+                  <h3>What is Rezxak?</h3>
+                  <p>We do software solutions for everyone!</p>
+                </GridItem>
+                <GridItem>
+                  <h3>What is Rezxak?</h3>
+                  <p>We do software solutions for everyone!</p>
+                </GridItem>
+              </GridContainer>
+              <BuildButtonContainer>
+                <BuildButton href="#contact-us">Build with us!</BuildButton>
+              </BuildButtonContainer>
+            </AboutContainer>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: -15,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <ServicesContainer>
+              <h2 id="services">Services</h2>
+              <GridContainer>
+                <GridItem>
+                  <ServicesItemHeading>Web Design</ServicesItemHeading>
+                </GridItem>
+                <GridItem>
+                  <ServicesItemHeading>
+                    System Architecture Design
+                  </ServicesItemHeading>
+                </GridItem>
+                <GridItem>
+                  <ServicesItemHeading>Mobile Design</ServicesItemHeading>
+                </GridItem>
+              </GridContainer>
+            </ServicesContainer>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: -15,
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <ContactContainer>
+              <h2 id="contact-us">Contact us</h2>
+              <GridContainer>
+                <GridItem>
+                  <LinkWrapper
+                    href="https://www.linkedin.com/in/benjamin-t-stafford"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon size="2xl" icon={faLinkedin} />
+                    <LinkedText>LinkedIn</LinkedText>
+                  </LinkWrapper>
+                </GridItem>
+                <GridItem>
+                  <LinkWrapper
+                    href="https://github.com/bstafford2017"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon size="2xl" icon={faGithub} />
+                    <LinkedText>GitHub</LinkedText>
+                  </LinkWrapper>
+                </GridItem>
+                <GridItem>
+                  <LinkWrapper href="mailto:ben@staffordsolutionsllc.com?subject=Let%27s%20get%20in%20touch%21">
+                    <FontAwesomeIcon size="2xl" icon={faEnvelope} />
+                    <LinkedText>Email</LinkedText>
+                  </LinkWrapper>
+                </GridItem>
+              </GridContainer>
+            </ContactContainer>
+          </motion.div>
         </Main>
       </MainContainer>
       <Footer>
