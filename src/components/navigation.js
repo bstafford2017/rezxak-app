@@ -9,6 +9,7 @@ const Logo = styled.img`
 
 const NavLinkContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   font-size: 20px;
 `;

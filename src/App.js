@@ -72,6 +72,7 @@ const BuildButton = styled.a`
 
 const GridContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 `;
 
