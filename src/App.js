@@ -2,7 +2,12 @@ import React from 'react';
 import Navigation from './components/navigation';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faGears,
+  faMarker,
+  faMobile,
+} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useScroll, motion } from 'framer-motion';
 
@@ -79,7 +84,7 @@ const GridContainer = styled.div`
 const GridItem = styled.div`
   flex: 1;
   text-align: center;
-  padding: 25px;
+  padding: 85px 25px;
 `;
 
 const Footer = styled.footer`
@@ -114,11 +119,12 @@ export default () => {
             initial={{
               opacity: 0,
             }}
+            transition={{ repeatType: 'reverse' }}
             whileInView={{
               opacity: 1,
-              y: -15,
+              y: -45,
               transition: {
-                duration: 0.5,
+                duration: 1,
               },
             }}
             viewport={{ once: true }}
@@ -144,45 +150,100 @@ export default () => {
               </BuildButtonContainer>
             </AboutContainer>
           </motion.div>
-          <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: -15,
-              transition: {
-                duration: 0.5,
-              },
-            }}
-            viewport={{ once: true }}
-          >
-            <ServicesContainer>
-              <h2 id="services">Services</h2>
+          <ServicesContainer>
+            <h2 id="services">Services</h2>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              transition={{ repeatType: 'reverse' }}
+              whileInView={{
+                opacity: 1,
+                y: -45,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true }}
+            >
               <GridContainer>
                 <GridItem>
-                  <ServicesItemHeading>Web Design</ServicesItemHeading>
-                </GridItem>
-                <GridItem>
                   <ServicesItemHeading>
-                    System Architecture Design
+                    <FontAwesomeIcon size="2xl" icon={faMarker} />
+                    Web Design
                   </ServicesItemHeading>
                 </GridItem>
                 <GridItem>
-                  <ServicesItemHeading>Mobile Design</ServicesItemHeading>
+                  We utilize web design principles to build the most efficient
+                  and user-friendly patterns in the industry.
                 </GridItem>
               </GridContainer>
-            </ServicesContainer>
-          </motion.div>
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              transition={{ repeatType: 'reverse' }}
+              whileInView={{
+                opacity: 1,
+                y: -45,
+                transition: {
+                  duration: 1,
+                },
+              }}
+              viewport={{ once: true }}
+            >
+              <GridContainer>
+                <GridItem>
+                  We utilize web design principles to build the most efficient
+                  and user-friendly patterns in the industry.
+                </GridItem>
+                <GridItem>
+                  <ServicesItemHeading>
+                    <FontAwesomeIcon size="2xl" icon={faGears} />
+                    System Architecture Design
+                  </ServicesItemHeading>
+                </GridItem>
+              </GridContainer>
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              transition={{ repeatType: 'reverse' }}
+              whileInView={{
+                opacity: 1,
+                y: -45,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true }}
+            >
+              <GridContainer>
+                <GridItem>
+                  <ServicesItemHeading>
+                    <FontAwesomeIcon size="2xl" icon={faMobile} />
+                    Mobile Design
+                  </ServicesItemHeading>
+                </GridItem>
+                <GridItem>
+                  We utilize web design principles to build the most efficient
+                  and user-friendly patterns in the industry.
+                </GridItem>
+              </GridContainer>
+            </motion.div>
+          </ServicesContainer>
           <motion.div
             initial={{
               opacity: 0,
             }}
+            transition={{ repeatType: 'reverse' }}
             whileInView={{
               opacity: 1,
-              y: -15,
+              y: -45,
               transition: {
-                duration: 0.5,
+                duration: 1,
               },
             }}
             viewport={{ once: true }}
