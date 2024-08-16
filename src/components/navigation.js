@@ -15,14 +15,14 @@ const NavLinkContainer = styled.div`
 `;
 
 const NavLink = styled.a`
-  color: #eee;
+  color: #fed84b;
   text-decoration: none;
   padding: 15px 35px;
 
   transition: color 1s;
 
   &:hover {
-    color: #fed84b;
+    color: #fa7993;
   }
 `;
 
@@ -40,6 +40,7 @@ export default () => {
       <NavLinkContainer>
         <NavLink href="#about-us">About us</NavLink>
         <NavLink href="#services">Services</NavLink>
+        <NavLink href="#talent">Our talent</NavLink>
         <NavLink href="#contact-us">Contact us</NavLink>
       </NavLinkContainer>
     </Navigation>

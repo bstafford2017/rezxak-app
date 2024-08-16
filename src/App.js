@@ -15,7 +15,7 @@ const MainContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #fed84b 0%, #fa7993 100%);
+  background: linear-gradient(180deg, #fff 0%, #aaa 100%);
 `;
 
 const Main = styled.main``;
@@ -36,7 +36,11 @@ const AboutContainer = styled.div`
 
 const ServicesContainer = styled.div`
   padding: 35px;
-  background: #00000055;
+  background: #00000015;
+`;
+
+const ServicesIcon = styled(FontAwesomeIcon)`
+  padding-right: 15px;
 `;
 
 const ContactContainer = styled.div`
@@ -44,13 +48,12 @@ const ContactContainer = styled.div`
 `;
 
 const ServicesItemHeading = styled.p`
-  border-radius: 25px;
   border-width: 2px;
   border-style: solid;
-  border-color: #fed84b;
   padding: 35px;
-  color: #eee;
-  background-color: #0d0821;
+  color: white;
+  background-color: #000;
+  border-image: linear-gradient(180deg, #fed84b 0%, #fa7993 100%) 1;
 `;
 
 const BuildButtonContainer = styled.div`
@@ -71,7 +74,7 @@ const BuildButton = styled.a`
   transition: background-color 1s;
 
   &:hover {
-    background-color: #fdbc64;
+    background-color: #fa7993;
   }
 `;
 
@@ -122,9 +125,9 @@ export default () => {
             transition={{ repeatType: 'reverse' }}
             whileInView={{
               opacity: 1,
-              y: -45,
+              y: 0,
               transition: {
-                duration: 1,
+                duration: 1.5,
               },
             }}
             viewport={{ once: true }}
@@ -134,15 +137,27 @@ export default () => {
               <GridContainer>
                 <GridItem>
                   <h3>What is Rezxak?</h3>
-                  <p>We do software solutions for everyone!</p>
+                  <p>
+                    We do software consulting agency that builds innovative
+                    solutions for better tomorrows!
+                  </p>
                 </GridItem>
                 <GridItem>
-                  <h3>What is Rezxak?</h3>
-                  <p>We do software solutions for everyone!</p>
+                  <h3>How do we do it?</h3>
+                  <p>
+                    We empower our engineers to build creative technology
+                    solutions for optimizing the user experience for our
+                    clients.
+                  </p>
                 </GridItem>
                 <GridItem>
-                  <h3>What is Rezxak?</h3>
-                  <p>We do software solutions for everyone!</p>
+                  <h3>What is your goal?</h3>
+                  <p>
+                    Our goal is to provide our clients with height quality
+                    sofware solutions on the market. We want to build scalable
+                    secure innovation technologies that enhance the customer
+                    experience.
+                  </p>
                 </GridItem>
               </GridContainer>
               <BuildButtonContainer>
@@ -159,9 +174,9 @@ export default () => {
               transition={{ repeatType: 'reverse' }}
               whileInView={{
                 opacity: 1,
-                y: -45,
+                y: -0,
                 transition: {
-                  duration: 0.5,
+                  duration: 2,
                 },
               }}
               viewport={{ once: true }}
@@ -169,7 +184,7 @@ export default () => {
               <GridContainer>
                 <GridItem>
                   <ServicesItemHeading>
-                    <FontAwesomeIcon size="2xl" icon={faMarker} />
+                    <ServicesIcon size="2xl" icon={faMarker} />
                     Web Design
                   </ServicesItemHeading>
                 </GridItem>
@@ -186,9 +201,9 @@ export default () => {
               transition={{ repeatType: 'reverse' }}
               whileInView={{
                 opacity: 1,
-                y: -45,
+                y: -0,
                 transition: {
-                  duration: 1,
+                  duration: 2,
                 },
               }}
               viewport={{ once: true }}
@@ -200,7 +215,7 @@ export default () => {
                 </GridItem>
                 <GridItem>
                   <ServicesItemHeading>
-                    <FontAwesomeIcon size="2xl" icon={faGears} />
+                    <ServicesIcon size="2xl" icon={faGears} />
                     System Architecture Design
                   </ServicesItemHeading>
                 </GridItem>
@@ -213,9 +228,9 @@ export default () => {
               transition={{ repeatType: 'reverse' }}
               whileInView={{
                 opacity: 1,
-                y: -45,
+                y: -0,
                 transition: {
-                  duration: 0.5,
+                  duration: 2,
                 },
               }}
               viewport={{ once: true }}
@@ -223,7 +238,7 @@ export default () => {
               <GridContainer>
                 <GridItem>
                   <ServicesItemHeading>
-                    <FontAwesomeIcon size="2xl" icon={faMobile} />
+                    <ServicesIcon size="2xl" icon={faMobile} />
                     Mobile Design
                   </ServicesItemHeading>
                 </GridItem>
@@ -241,9 +256,71 @@ export default () => {
             transition={{ repeatType: 'reverse' }}
             whileInView={{
               opacity: 1,
-              y: -45,
+              y: -0,
               transition: {
-                duration: 1,
+                duration: 1.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <ContactContainer>
+              <h2 id="talent">Our talent</h2>
+              <GridContainer>
+                <GridItem>
+                  <img
+                    style={{
+                      borderRadius: '15px',
+                      marginTop: '25px',
+                      border: '2px solid #333',
+                      width: '100%',
+                      height: 'auto',
+                    }}
+                    src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/274665396_5190147497665012_453686274030750986_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=BTQXD9oMTfgQ7kNvgGivZ5_&_nc_ht=scontent-ord5-2.xx&cb_e2o_trans=q&oh=00_AYBIoQNN-LODtkV5Mx0pvF9yw3hQ03uzoJwE-zsQn-g6rg&oe=66C4A85B"
+                    alt="Picture of Benjamin Stafford"
+                  />
+                </GridItem>
+                <GridItem style={{ textAlign: 'left' }}>
+                  <h3 style={{ paddingTop: '25px', fontStyle: 'bold' }}>
+                    Benjamin Stafford
+                  </h3>
+                  <p style={{ fontStyle: 'italic' }}>Founder, CEO of Rezxak</p>
+                  <p style={{ paddingTop: '15px' }}>
+                    Benjamin Stafford grew up in Kasson, MN - a small town
+                    outside of Rochester, MN. In 2020, he graduated from the
+                    University of North Dakota with a Bachelors of Science in
+                    Computer Science and a minor in Mathematics. After college,
+                    he accepted a position at Securian Finacial as an software
+                    engineer where he worked the external customer portal site
+                    for the RMT (Retail Market Technology) division. Securian
+                    AWS migration in 2021 enabled his success as a cloud
+                    developer. This initative allowed him to focus on building
+                    microservice REST architecture on the AWS platform.
+                  </p>
+                  <p style={{ paddingTop: '15px' }}>
+                    Ben is known for his relentless focus on implementing
+                    innovative technologies to improve the user experience. His
+                    key accomplishments include implementing the first
+                    production-grade GraphQL in RMT and introducing
+                    microfrontend architecture at Securian Financial.
+                  </p>
+                  <p style={{ paddingTop: '15px' }}>
+                    During 2024, Ben started Rezxak where he dedicates his time
+                    on sofware engineering consulting.
+                  </p>
+                </GridItem>
+              </GridContainer>
+            </ContactContainer>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            transition={{ repeatType: 'reverse' }}
+            whileInView={{
+              opacity: 1,
+              y: -0,
+              transition: {
+                duration: 1.5,
               },
             }}
             viewport={{ once: true }}
