@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import LogoWithName from '../../public/rezxak-logo-text.jpg';
+import LogoWithName from '../../public/basic-logo-text.jpg';
 
 const Navigation = styled.nav``;
 
