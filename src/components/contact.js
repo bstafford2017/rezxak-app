@@ -70,7 +70,7 @@ export default function () {
             </LinkWrapper>
           </GridItem>
           <GridItem>
-            <LinkWrapper href="mailto:ben@staffordsolutionsllc.com?subject=Let%27s%20get%20in%20touch%21">
+            <LinkWrapper href="mailto:ben@rezxak.com?subject=Let%27s%20get%20in%20touch%21">
               <FontAwesomeIcon size="2xl" icon={faEnvelope} />
               <LinkedText>Email</LinkedText>
             </LinkWrapper>
