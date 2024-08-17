@@ -54,7 +54,7 @@ const ImageContainer = styled.div`
 
   @keyframes slide {
     0% {
-      transform: translateX(-250px);
+      transform: translateX(-135px);
     }
     100% {
       transform: translateX(calc(-200px * 12));
