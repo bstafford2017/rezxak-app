@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import Profile from '../../public/profile.jpg';
 
 const GridContainer = styled.div`
   display: flex;
@@ -47,7 +48,7 @@ export default function () {
                 width: '100%',
                 height: 'auto',
               }}
-              src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/274665396_5190147497665012_453686274030750986_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=BTQXD9oMTfgQ7kNvgGivZ5_&_nc_ht=scontent-ord5-2.xx&cb_e2o_trans=q&oh=00_AYBIoQNN-LODtkV5Mx0pvF9yw3hQ03uzoJwE-zsQn-g6rg&oe=66C4A85B"
+              src={Profile}
               alt="Picture of Benjamin Stafford"
             />
           </GridItem>

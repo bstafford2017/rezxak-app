@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LogoWithName from '../../public/logo-with-text.png';
 
 const Navigation = styled.nav``;
 
@@ -30,12 +31,7 @@ export default () => {
   return (
     <Navigation>
       <a href="./">
-        <Logo
-          width={315}
-          height={105}
-          src="./logo-with-text.png"
-          alt="Rezxak logo"
-        />
+        <Logo width={315} height={105} src={LogoWithName} alt="Rezxak logo" />
       </a>
       <NavLinkContainer>
         <NavLink href="#about-us">About us</NavLink>
