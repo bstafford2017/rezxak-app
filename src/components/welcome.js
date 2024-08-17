@@ -8,15 +8,17 @@ const Background = styled.div`
 `;
 
 const Heading = styled.h1`
+  font-size: 46px;
   padding-top: 75px;
   margin: 0px;
 `;
 
 const Subtext = styled.p`
+  font-size: 26px;
   font-style: italic;
   margin: 0px;
   position: relative;
-  left: 75px;
+  left: 65px;
 `;
 
 const ButtonContainer = styled.div`

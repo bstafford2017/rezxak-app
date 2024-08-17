@@ -16,7 +16,13 @@ const MainContainer = styled.div`
   background: linear-gradient(180deg, #fff 0%, #aaa 100%);
 `;
 
-const Main = styled.main``;
+const Main = styled.main`
+  @media screen and (min-width: 640px) {
+    & > * {
+      padding: 35px 150px;
+    }
+  }
+`;
 
 export default () => {
   return (

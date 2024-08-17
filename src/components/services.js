@@ -29,7 +29,7 @@ const ServicesIcon = styled(FontAwesomeIcon)`
 const ServicesItemHeading = styled.p`
   border-width: 6px;
   border-style: solid;
-  padding: 35px;
+  padding: 75px 35px;
   color: white;
   background-color: #0d0822ff;
   border-image: linear-gradient(180deg, #fed84b 0%, #fa7993 100%) 1;
