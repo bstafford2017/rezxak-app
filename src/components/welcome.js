@@ -47,10 +47,24 @@ const SpinningLogo = styled.img`
   animation: rotation 5s infinite linear;
 
   @keyframes rotation {
-    from {
+    0% {
+      scale: 1;
+      opacity: 1;
       transform: rotate3d(0, 0, 0, 0);
     }
-    to {
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      scale: 0.75;
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.25;
+    }
+    100% {
+      scale: 1;
+      opacity: 1;
       transform: rotate3d(2, -1, -1, 1turn);
     }
   }
