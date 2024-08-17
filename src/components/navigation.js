@@ -84,6 +84,7 @@ export default () => {
             <DrawerContainer>
               <DrawerLink href="#about-us">About us</DrawerLink>
               <DrawerLink href="#services">Services</DrawerLink>
+              <DrawerLink href="#technologies">Technologies</DrawerLink>
               <DrawerLink href="#talent">Our talent</DrawerLink>
               <DrawerLink href="#contact-us">Contact us</DrawerLink>
             </DrawerContainer>
@@ -93,6 +94,7 @@ export default () => {
         <NavLinkContainer>
           <NavLink href="#about-us">About us</NavLink>
           <NavLink href="#services">Services</NavLink>
+          <NavLink href="#technologies">Technologies</NavLink>
           <NavLink href="#talent">Our talent</NavLink>
           <NavLink href="#contact-us">Contact us</NavLink>
         </NavLinkContainer>

@@ -8,6 +8,7 @@ import AboutUs from './components/about-us';
 import Footer from './components/footer';
 import ContactUs from './components/contact';
 import Welcome from './components/welcome';
+import Technologies from './components/technologies';
 
 const MainContainer = styled.div`
   height: 100%;
@@ -34,6 +35,7 @@ export default () => {
           <Welcome />
           <AboutUs />
           <Services />
+          <Technologies />
           <Talent />
           <ContactUs />
         </Main>
