@@ -91,7 +91,7 @@ Resources:
   SuperAppRouteSetGroup:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneId: Z019972822N49WGVV3O5H
+      HostedZoneId: Z0588881YH7NLLQQDK15
       RecordSets:
         - Name: 'www.rezxak.com'
           Type: A
@@ -112,7 +112,7 @@ Resources:
       DomainName: '*.rezxak.com'
       DomainValidationOptions:
         - DomainName: '*.rezxak.com'
-          HostedZoneId: Z019972822N49WGVV3O5H # route 53 zone
+          HostedZoneId: Z0588881YH7NLLQQDK15 # route 53 zone
       ValidationMethod: DNS
 
 Outputs:
