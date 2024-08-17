@@ -84,7 +84,9 @@ export default function () {
           </GridItem>
         </GridContainer>
         <BuildButtonContainer>
-          <BuildButton href="#contact-us">Build with us!</BuildButton>
+          <BuildButton href="mailto:ben@rezxak.com?subject=Let%27s%20get%20in%20touch%21">
+            Build with us!
+          </BuildButton>
         </BuildButtonContainer>
       </AboutContainer>
     </motion.div>
