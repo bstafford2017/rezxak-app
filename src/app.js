@@ -7,6 +7,7 @@ import ProgressBar from './components/progress-bar';
 import AboutUs from './components/about-us';
 import Footer from './components/footer';
 import ContactUs from './components/contact';
+import Welcome from './components/welcome';
 
 const MainContainer = styled.div`
   height: 100%;
@@ -24,6 +25,7 @@ export default () => {
       <Navigation />
       <MainContainer>
         <Main>
+          <Welcome />
           <AboutUs />
           <Services />
           <Talent />
