@@ -43,6 +43,19 @@ const Button = styled.a`
   }
 `;
 
+const SpinningLogo = styled.img`
+  animation: rotation 5s infinite linear;
+
+  @keyframes rotation {
+    from {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+    to {
+      transform: rotate3d(2, -1, -1, 1turn);
+    }
+  }
+`;
+
 const GridContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +96,12 @@ export default function () {
             </ButtonContainer>
           </GridItem>
           <GridItem>
-            <img width={350} height={350} src={Logo} alt="Rezxak logo" />
+            <SpinningLogo
+              width={350}
+              height={350}
+              src={Logo}
+              alt="Rezxak logo"
+            />
           </GridItem>
         </GridContainer>
       </motion.div>
