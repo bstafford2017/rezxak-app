@@ -83,8 +83,8 @@ export default function () {
       >
         <GridContainer>
           <GridItem>
-            We utilize web design principles to build the most efficient and
-            user-friendly patterns in the industry.
+            Our teams architecture high availability secure web applications on
+            the cloud.
           </GridItem>
           <GridItem>
             <ServicesItemHeading>
@@ -117,8 +117,9 @@ export default function () {
             </ServicesItemHeading>
           </GridItem>
           <GridItem>
-            We utilize web design principles to build the most efficient and
-            user-friendly patterns in the industry.
+            Mobile applications adoption is critical in today's fast moving
+            environment. We can quickly and efficiently build robust mobile
+            applications on both Android and iOS devices.
           </GridItem>
         </GridContainer>
       </motion.div>

@@ -61,12 +61,15 @@ export default function () {
               Benjamin Stafford grew up in Kasson, MN - a small town outside of
               Rochester, MN. In 2020, he graduated from the University of North
               Dakota with a Bachelors of Science in Computer Science and a minor
-              in Mathematics. After college, he accepted a position at Securian
-              Finacial as an software engineer where he worked the external
-              customer portal site for the RMT (Retail Market Technology)
-              division. Securian AWS migration in 2021 enabled his success as a
-              cloud developer. This initative allowed him to focus on building
-              microservice REST architecture on the AWS platform.
+              in Mathematics.
+            </p>
+            <p style={{ paddingTop: '15px' }}>
+              After college, he accepted a position at Securian Finacial as a
+              software engineer where he worked the external customer portal
+              site for the RMT (Retail Market Technology) division. Securian AWS
+              migration in 2021 enabled his success as a cloud developer. This
+              initative allowed him to focus on building microservice REST
+              architecture on the AWS platform.
             </p>
             <p style={{ paddingTop: '15px' }}>
               Ben is known for his relentless focus on implementing innovative
