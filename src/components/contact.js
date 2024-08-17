@@ -19,7 +19,7 @@ const GridItem = styled.div`
 
 const LinkWrapper = styled.a`
   text-decoration: none;
-  color: #000;
+  color: #0d0822ff;
 `;
 
 const LinkedText = styled.p`
@@ -56,7 +56,7 @@ export default function () {
               href="https://www.linkedin.com/in/benjamin-t-stafford"
               target="_blank"
             >
-              <FontAwesomeIcon size="2xl" icon={faLinkedin} />
+              <FontAwesomeIcon size="2xl" icon={faLinkedin} color="#0d0822ff" />
               <LinkedText>LinkedIn</LinkedText>
             </LinkWrapper>
           </GridItem>
@@ -65,13 +65,13 @@ export default function () {
               href="https://github.com/bstafford2017"
               target="_blank"
             >
-              <FontAwesomeIcon size="2xl" icon={faGithub} />
+              <FontAwesomeIcon size="2xl" icon={faGithub} color="#0d0822ff" />
               <LinkedText>GitHub</LinkedText>
             </LinkWrapper>
           </GridItem>
           <GridItem>
             <LinkWrapper href="mailto:ben@rezxak.com?subject=Let%27s%20get%20in%20touch%21">
-              <FontAwesomeIcon size="2xl" icon={faEnvelope} />
+              <FontAwesomeIcon size="2xl" icon={faEnvelope} color="#0d0822ff" />
               <LinkedText>Email</LinkedText>
             </LinkWrapper>
           </GridItem>

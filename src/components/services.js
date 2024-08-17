@@ -31,7 +31,7 @@ const ServicesItemHeading = styled.p`
   border-style: solid;
   padding: 35px;
   color: white;
-  background-color: #000;
+  background-color: #0d0822ff;
   border-image: linear-gradient(180deg, #fed84b 0%, #fa7993 100%) 1;
 `;
 

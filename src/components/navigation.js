@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import useIsMobile from '../hooks/mobile';
 
-const Navigation = styled.nav``;
+const Navigation = styled.nav`
+  background-color: #0d0822ff;
+`;
 
 const Logo = styled.img`
   padding-left: clamp(0px, 55px, 75px);

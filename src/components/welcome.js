@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Logo from '../../public/logo-transparent.png';
 
 const Background = styled.div`
-  background: linear-gradient(90deg, #aaa 0%, #000 100%);
+  background: linear-gradient(90deg, #aaa 0%, #0d0822ff 100%);
 `;
 
 const Heading = styled.h1`
