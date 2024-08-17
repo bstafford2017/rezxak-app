@@ -45,13 +45,14 @@ export default function () {
     <motion.div
       initial={{
         opacity: 0,
+        y: 30,
       }}
       transition={{ repeatType: 'reverse' }}
       whileInView={{
         opacity: 1,
         y: 0,
         transition: {
-          duration: 1.5,
+          duration: 2,
         },
       }}
       viewport={{ once: true }}

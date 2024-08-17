@@ -41,11 +41,12 @@ export default function () {
       <motion.div
         initial={{
           opacity: 0,
+          x: -100,
         }}
         transition={{ repeatType: 'reverse' }}
         whileInView={{
           opacity: 1,
-          x: 15,
+          x: 0,
           transition: {
             duration: 2,
           },
@@ -68,11 +69,12 @@ export default function () {
       <motion.div
         initial={{
           opacity: 0,
+          x: 100,
         }}
         transition={{ repeatType: 'reverse' }}
         whileInView={{
           opacity: 1,
-          x: -15,
+          x: 0,
           transition: {
             duration: 2,
           },
@@ -95,11 +97,12 @@ export default function () {
       <motion.div
         initial={{
           opacity: 0,
+          x: -100,
         }}
         transition={{ repeatType: 'reverse' }}
         whileInView={{
           opacity: 1,
-          x: 15,
+          x: 0,
           transition: {
             duration: 2,
           },
