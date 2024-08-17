@@ -12,7 +12,8 @@ const GridContainer = styled.div`
 const GridItem = styled.div`
   flex: 1;
   text-align: center;
-  padding: 85px 25px;
+  min-width: 200px;
+  padding: 0px 25px;
 `;
 
 const Container = styled.div`
@@ -38,7 +39,7 @@ export default function () {
     >
       <Container>
         <h2 id="talent">Our talent</h2>
-        <GridContainer>
+        <GridContainer style={{ padding: '25px' }}>
           <GridItem>
             <img
               style={{
@@ -53,9 +54,7 @@ export default function () {
             />
           </GridItem>
           <GridItem style={{ textAlign: 'left' }}>
-            <h3 style={{ paddingTop: '25px', fontStyle: 'bold' }}>
-              Benjamin Stafford
-            </h3>
+            <h3 style={{ fontStyle: 'bold' }}>Benjamin Stafford</h3>
             <p style={{ fontStyle: 'italic' }}>Founder, CEO of Rezxak</p>
             <p style={{ paddingTop: '15px' }}>
               Benjamin Stafford grew up in Kasson, MN - a small town outside of

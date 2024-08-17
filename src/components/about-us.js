@@ -12,6 +12,7 @@ const GridItem = styled.div`
   flex: 1;
   text-align: center;
   padding: 85px 25px;
+  min-width: 200px;
 `;
 
 const AboutContainer = styled.div`
