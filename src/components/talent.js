@@ -22,25 +22,25 @@ const Container = styled.div`
 
 export default function () {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
-      transition={{ repeatType: 'reverse' }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 2,
-        },
-      }}
-      viewport={{ once: true }}
-    >
-      <Container>
-        <h2 id="talent">Our talent</h2>
-        <GridContainer style={{ padding: '25px' }}>
-          <GridItem>
+    <Container>
+      <h2 id="talent">Our talent</h2>
+      <GridContainer style={{ padding: '25px' }}>
+        <GridItem>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            transition={{ repeatType: 'reverse' }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 2,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <img
               style={{
                 borderRadius: '15px',
@@ -52,8 +52,24 @@ export default function () {
               src={Profile}
               alt="Picture of Benjamin Stafford"
             />
-          </GridItem>
-          <GridItem style={{ textAlign: 'left' }}>
+          </motion.div>
+        </GridItem>
+        <GridItem style={{ textAlign: 'left' }}>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            transition={{ repeatType: 'reverse' }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 2,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <h3 style={{ fontStyle: 'bold' }}>Benjamin Stafford</h3>
             <p style={{ fontStyle: 'italic' }}>Founder, CEO of Rezxak</p>
             <p style={{ paddingTop: '15px' }}>
@@ -81,9 +97,9 @@ export default function () {
               During 2024, Ben started Rezxak where he dedicates his time on
               sofware engineering consulting.
             </p>
-          </GridItem>
-        </GridContainer>
-      </Container>
-    </motion.div>
+          </motion.div>
+        </GridItem>
+      </GridContainer>
+    </Container>
   );
 }
