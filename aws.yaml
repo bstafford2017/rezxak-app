@@ -1,0 +1,124 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  BucketName:
+    Description: Unique name for your bucket. This will be in the S3 url to your React app.
+    Type: String
+  AccountId:
+    Description: Unique AWS id for your account. This is the AWS account that the resources will be created and managed in.
+    Type: String
+
+Resources:
+  RezxakBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  RezxakBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref RezxakBucket
+      PolicyDocument:
+        Id: AllowCloudFrontToAccessS3Bucket
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowCloudFrontServicePrincipal
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: 's3:GetObject'
+            Resource: !Join ['', ['arn:aws:s3:::', !Ref RezxakBucket, '/*']]
+            Condition:
+              StringEquals:
+                AWS:SourceArn:
+                  !Join [
+                    '',
+                    [
+                      'arn:aws:cloudfront::',
+                      !Ref AccountId,
+                      ':distribution/',
+                      !Ref RezxakDistribution,
+                    ],
+                  ]
+
+  RezxakDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - '*.rezxak.com'
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          ViewerProtocolPolicy: 'redirect-to-https'
+          TargetOriginId: RezxakOrigin
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # CachingOptimized
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf # CORS-S3Origin
+        DefaultRootObject: index.html
+        Enabled: true
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponsePagePath: /index.html
+            ResponseCode: 200
+          - ErrorCode: 404
+            ResponsePagePath: /index.html
+            ResponseCode: 200
+        Origins:
+          - Id: RezxakOrigin
+            DomainName: !GetAtt RezxakBucket.RegionalDomainName
+            OriginAccessControlId: !GetAtt RezxakOriginAccessControl.Id
+            S3OriginConfig: {}
+        ViewerCertificate:
+          AcmCertificateArn: !Ref RezxakCertificate
+          SslSupportMethod: sni-only
+
+  RezxakOriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: 'rezxak-origin-access-control'
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  SuperAppRouteSetGroup:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: Z019972822N49WGVV3O5H
+      RecordSets:
+        - Name: 'www.rezxak.com'
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2 # general cloudfront hosted zone id
+            DNSName: !GetAtt RezxakDistribution.DomainName
+            EvaluateTargetHealth: true
+        - Name: 'rezxak.com'
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2 # general cloudfront hosted zone id
+            DNSName: !GetAtt RezxakDistribution.DomainName
+            EvaluateTargetHealth: true
+
+  RezxakCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: '*.rezxak.com'
+      DomainValidationOptions:
+        - DomainName: '*.rezxak.com'
+          HostedZoneId: Z019972822N49WGVV3O5H # route 53 zone
+      ValidationMethod: DNS
+
+Outputs:
+  Domain:
+    Value: !GetAtt RezxakDistribution.DomainName
+  CloudFrontDistributionId:
+    Value: !GetAtt RezxakDistribution.Id
+  S3BucketName:
+    Value: !Ref RezxakBucket
