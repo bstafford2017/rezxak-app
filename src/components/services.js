@@ -35,6 +35,10 @@ const ServicesItemHeading = styled.p`
   border-image: linear-gradient(180deg, #fed84b 0%, #fa7993 100%) 1;
 `;
 
+const ServicesText = styled.p`
+  padding-top: 55px;
+`;
+
 export default function () {
   return (
     <ServicesContainer>
@@ -62,8 +66,10 @@ export default function () {
             </ServicesItemHeading>
           </GridItem>
           <GridItem>
-            We utilize web design principles to build the most efficient and
-            user-friendly patterns in the industry.
+            <ServicesText>
+              We utilize web design principles to build the most efficient and
+              user-friendly patterns in the industry.
+            </ServicesText>
           </GridItem>
         </GridContainer>
       </motion.div>
@@ -84,8 +90,10 @@ export default function () {
       >
         <GridContainer>
           <GridItem>
-            Our teams architecture high availability secure web applications on
-            the cloud.
+            <ServicesText>
+              Our teams architecture high availability secure web applications
+              on the cloud.
+            </ServicesText>
           </GridItem>
           <GridItem>
             <ServicesItemHeading>
@@ -118,9 +126,11 @@ export default function () {
             </ServicesItemHeading>
           </GridItem>
           <GridItem>
-            Mobile applications adoption is critical in today's fast moving
-            environment. We can quickly and efficiently build robust mobile
-            applications on both Android and iOS devices.
+            <ServicesText>
+              Mobile applications adoption is critical in today's fast moving
+              environment. We can quickly and efficiently build robust mobile
+              applications on both Android and iOS devices.
+            </ServicesText>
           </GridItem>
         </GridContainer>
       </motion.div>
