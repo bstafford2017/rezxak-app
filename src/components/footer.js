@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../../public/logo.jpg';
+import Logo from '../../public/rezxak-logo.jpg';
 
 const Footer = styled.footer`
   color: #eee;
