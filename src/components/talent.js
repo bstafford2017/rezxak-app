@@ -73,8 +73,8 @@ export default function () {
             <h3 style={{ fontStyle: 'bold' }}>Benjamin Stafford</h3>
             <p style={{ fontStyle: 'italic' }}>Founder, CEO of Rezxak</p>
             <p style={{ paddingTop: '15px' }}>
-              Benjamin Stafford grew up in Kasson, MN - a small town outside of
-              Rochester, MN. In 2020, he graduated from the University of North
+              Benjamin Stafford grew up in a small town in Southeastern
+              Minnesota. In 2020, he graduated from the University of North
               Dakota with a Bachelors of Science in Computer Science and a minor
               in Mathematics.
             </p>
