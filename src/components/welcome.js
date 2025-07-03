@@ -46,20 +46,22 @@ const Button = styled.a`
 `;
 
 const SpinningLogo = styled.img`
-  animation: rotation 5s infinite linear;
+  animation: rotation 10s infinite linear;
+  position: absolute;
 
   @keyframes rotation {
     0% {
       scale: 1;
       opacity: 1;
       transform: rotate3d(0, 0, 0, 0);
+      left: -500px;
     }
     25% {
       opacity: 0.25;
     }
     50% {
       scale: 0.75;
-      opacity: 0;
+      left: 100%;
     }
     75% {
       opacity: 0.25;
@@ -68,6 +70,7 @@ const SpinningLogo = styled.img`
       scale: 1;
       opacity: 1;
       transform: rotate3d(2, -1, -1, 1turn);
+      left: -500px;
     }
   }
 `;
