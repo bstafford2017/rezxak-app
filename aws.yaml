@@ -52,6 +52,7 @@ Resources:
       DistributionConfig:
         Aliases:
           - '*.rezxak.com'
+          - 'rezxak.com'
         DefaultCacheBehavior:
           AllowedMethods:
             - GET
@@ -109,8 +110,12 @@ Resources:
   RezxakCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
-      DomainName: '*.rezxak.com'
+      DomainName: 'rezxak.com'
+      SubjectAlternativeNames:
+        - 'www.rezxak.com'
       DomainValidationOptions:
+        - DomainName: 'rezxak.com'
+          HostedZoneId: Z0588881YH7NLLQQDK15 # route 53 zone
         - DomainName: '*.rezxak.com'
           HostedZoneId: Z0588881YH7NLLQQDK15 # route 53 zone
       ValidationMethod: DNS
